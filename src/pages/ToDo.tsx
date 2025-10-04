@@ -4,9 +4,7 @@ import type { RootState, AppDispatch } from "../redux/store";
 import { saveTask, updateTask, deleteTask } from "../redux/slices/toDoSlice";
 import "./ToDo.css";
 
-/* =====================
-   Interfaces (tipado)
-   ===================== */
+
 interface ToDoForm {
   title: string;
   description: string;
@@ -17,10 +15,6 @@ interface EditState {
   title: string;
   description: string;
 }
-
-/* =====================
-   Componente
-   ===================== */
 const ToDo = () => {
   // Formulario para crear
   const [form, setForm] = useState<ToDoForm>({ title: "", description: "" });
@@ -78,7 +72,6 @@ const ToDo = () => {
     setEdit({ id: null, title: "", description: "" });
   };
 
-  // Borrar: inmediato, sin confirmación
   const removeTask = (id: number) => {
     dispatch(deleteTask({ id }));
   };
@@ -87,7 +80,6 @@ const ToDo = () => {
     <div className="todo-container">
       <h1 className="todo-title">ToDo con Redux Toolkit</h1>
 
-      {/* Crear tarea */}
       <form onSubmit={handleAdd} className="todo-form">
         <label>
           <span className="todo-label">Título</span>
@@ -116,7 +108,6 @@ const ToDo = () => {
         <button type="submit" className="btn btn-primary">Agregar</button>
       </form>
 
-      {/* Lista */}
       {tasks.length === 0 ? (
         <p>No hay tareas todavía. ¡Agregá la primera!</p>
       ) : (
