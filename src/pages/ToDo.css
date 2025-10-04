@@ -1,0 +1,101 @@
+/* Contenedor general */
+.todo-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Título */
+.todo-title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+/* Formulario de alta */
+.todo-form {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.todo-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.todo-input,
+.todo-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  outline: none;
+}
+
+.todo-textarea {
+  resize: vertical;
+}
+
+/* Botones */
+.btn {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  cursor: pointer;
+  background: white;
+}
+
+.btn-primary {
+  border-color: #333;
+}
+
+.btn-muted {
+  border-color: #999;
+  background: #f4f4f4;
+}
+
+.btn-danger {
+  border-color: #c00;
+  background: #ffecec;
+}
+
+/* Lista */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.todo-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.todo-item-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.todo-item-desc {
+  white-space: pre-wrap;
+  margin-top: 2px;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Modo edición */
+.todo-edit {
+  display: grid;
+  gap: 8px;
+}
